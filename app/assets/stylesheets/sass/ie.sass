@@ -1,0 +1,20 @@
+/* Welcome to Compass. Use this file to write IE specific override styles.
+ * Import this file using the following HTML or equivalent:
+ * <!--[if IE]>
+ *   <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+ * <![endif]--> */
+
+/* png fix */
+* html #selector
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale src='img/image.png')
+    background-image: none
+    background-repeat: no-repeat
+    background-color: transparent
+
+/* to fix clearfix of floats */
+* html .group
+    height: 1%
+
+/* to fix max-width of scaleable media */
+img, embed, object, video
+    width: 100%
