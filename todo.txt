@@ -1,0 +1,16 @@
+Pete:
+	•	CMS text editor doesn't allow pasting from clipboard
+	•	blog posts not in order (may be sorting by day and then alphabetically)
+	•	add ID to footer
+	•	move category tags to bottom of post
+	•	add IE and print stylesheets to headers
+	•	search feature?
+	•	#tags in sidebar should be <ul>
+	•	remove Comments title (not necessary)
+
+Nicki:
+	•	style sidebar and footer (once ID added to footer)
+	•	add media queries to set styles for wider screens/devices
+	•	style comment section - gravatar images, nested comments, form
+	•	print stylesheet
+	•	browser testing
