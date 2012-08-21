@@ -1,0 +1,167 @@
+/* Screen Styles by Nicki Rios | www.nickirios.com, nicki.rios@gmail.com */
+
+/* Variables */
+$color1: #0D0D0D /* darkest gray */
+$color2: #999999 /* dark gray */
+$color3: #333333 /* gray */
+$color4: #CCCCCC /* light gray */
+$color5: #FFFFFF /* white */
+$verticalPadding: 0.5em 0
+$thickBorder: 6px solid $color3
+$thinBorder: 1px solid $color1
+$rounded: 5px
+
+/* Typography Mixins */
+=main-fonts
+	font-family: Bookman Old Style, Book Antiqua, Times New Roman, Georgia, serif
+=secondary-fonts
+	font-family: Franklin Gothic Book, Verdana, sans serif
+
+/***** global ***************************/
+body
+	background-image: url(bkgd.png)
+#page_container
+	width: 100%
+	max-width: 1400px
+	margin: 0 auto
+	+main-fonts
+	border-top: $thickBorder
+	color: $color1
+	line-height: 1.5em
+	font-size: 1.25em
+	p
+		padding: $verticalPadding
+a
+	+secondary-fonts
+	text-decoration: underline
+	color: $color3
+a:hover, a:focus
+	color: $color2
+
+/***** header ***************************/
+header
+	text-align: center
+	#logo
+		padding: 1.5em 0
+		margin: 0 4%
+		a
+			+main-fonts
+			font-size: 1.5em
+			text-decoration: none
+	nav#menu
+		+secondary-fonts
+		padding: 1em 0
+		border-top: $thinBorder
+		border-bottom: $thickBorder
+		margin: 0 4%
+		li
+			display: inline
+			padding: 1em 8%
+			a
+				font-size: 1.25em
+				padding: 0.1em 0
+				text-decoration: none
+			a:hover, a:focus
+				border-bottom: 1px solid $color4
+#body_content_title
+	padding: 0.25em 0 0.5em 0
+	font-size: 1.75em
+
+/***** content **************************/
+#page
+	width: 92%
+	padding: 1em 4%
+	margin-bottom: 0.5em
+	border-bottom: $thickBorder
+article.blog_post, article#blog_post
+	padding: $verticalPadding
+	h1
+		font-size: 1.5em
+	h2
+		font-size: 1.4em
+	h3
+		font-size: 1.3em
+	h4
+		font-size: 1.2em
+	h5
+		font-size: 1.1em
+	h6
+		font-size: 1em
+	header
+		text-align: left
+		.details
+			+secondary-fonts
+		time
+			float: right
+	footer
+		p a
+			padding: $verticalPadding
+.blog_post:first-child
+	padding: 0.5em 0 1.5em 0
+.blog_post
+	border-bottom: $thinBorder
+	padding: 2em 0 1.5em 0
+	header
+		padding: $verticalPadding
+.blog_post:last-of-type
+	border-bottom: none
+.pagination
+	+secondary-fonts
+	padding: $verticalPadding
+	text-align: center
+	a, em, span
+		padding: 0.25em 8px
+		border-radius: $rounded
+		color: $color1
+		background-color: $color5
+		border: $thinBorder
+		text-decoration: none
+	em
+		background-color: $color4
+	a:hover, a:focus, span:hover, span:focus
+		color: $color1
+		background-color: $color4
+	.disabled:hover, .disabled:focus
+		background-color: $color5
+#comments
+	padding: 1em 0
+	h2
+		text-align: center
+	input[type="text"], input[type="email"], textarea, input[type="submit"]
+		width: 100%
+		padding: $verticalPadding
+		border-radius: $rounded
+		border: $thinBorder
+		background-color: $color5
+	textarea
+		height: 15em
+
+/***** sidebar **************************/
+#body_content_right
+	h2
+		font-size: 1.2em
+		padding-top: 1em
+	ul
+		list-style-type: square
+		list-style-position: inside
+	a
+		+secondary-fonts
+
+/***** footer ***************************/
+
+/***** messages/popups ******************/
+
+/***** buttons **************************/
+#next_prev_article
+	.next, .prev
+
+#comments input[type="submit"]
+	padding: 0.5em 5px
+	margin: 0.5em 0
+	font-size: 1em
+	color: $color5
+	background-color: $color2
+#comments input[type="submit"]:hover, #comments input[type="submit"]:focus
+	background-color: $color4
+#comments input[type="submit"]:active
+	background-color: $color2
