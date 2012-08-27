@@ -2,18 +2,18 @@
 
 /* Variables */
 $color1: #0D0D0D /* darkest gray */
-$color2: #999999 /* dark gray */
-$color3: #333333 /* gray */
+$color2: #333333 /* dark gray */
+$color3: #999999 /* gray */
 $color4: #CCCCCC /* light gray */
 $color5: #FFFFFF /* white */
 $verticalPadding: 0.5em 0
-$thickBorder: 6px solid $color3
+$thickBorder: 6px solid $color2
 $thinBorder: 1px solid $color1
 $rounded: 5px
 
 /* Typography Mixins */
 =main-fonts
-	font-family: Bookman Old Style, Book Antiqua, Times New Roman, Georgia, serif
+	font-family: Bookman Old Style, Book Antiqua, Georgia, serif
 =secondary-fonts
 	font-family: Franklin Gothic Book, Verdana, sans serif
 
@@ -34,9 +34,9 @@ body
 a
 	+secondary-fonts
 	text-decoration: underline
-	color: $color3
-a:hover, a:focus
 	color: $color2
+a:hover, a:focus
+	color: $color3
 
 /***** header ***************************/
 header
@@ -62,17 +62,19 @@ header
 				padding: 0.1em 0
 				text-decoration: none
 			a:hover, a:focus
-				border-bottom: 1px solid $color4
+				border-bottom: 1px solid $color3
 #body_content_title
 	padding: 0.25em 0 0.5em 0
 	font-size: 1.75em
 
 /***** content **************************/
-#page
+#body_content_title
 	width: 92%
-	padding: 1em 4%
+	padding: 1em 4% 0 4%
+#body, #body_content_left
+	width: 92%
+	padding: 1em 4% 0 4%
 	margin-bottom: 0.5em
-	border-bottom: $thickBorder
 article.blog_post, article#blog_post
 	padding: $verticalPadding
 	h1
@@ -137,20 +139,27 @@ article.blog_post, article#blog_post
 		height: 15em
 
 /***** sidebar **************************/
+#side_body
+	width: 92%
+	padding: 0 4% 1em 4%
 #body_content_right
+	padding: 0 4% 1em 4%
+	border-top: $thickBorder
 	h2
 		font-size: 1.2em
 		padding-top: 1em
 	ul
 		list-style-type: square
 		list-style-position: inside
-	a
-		+secondary-fonts
 
 /***** footer ***************************/
 #page-footer
+	max-width: 1400px
+	margin: 0 auto
+	padding: 0.5em 4%
 	text-align: center
-	font-size: 0.9em
+	font-size: 0.8em
+	border-top: $thickBorder
 
 /***** messages/popups ******************/
 
@@ -168,3 +177,19 @@ article.blog_post, article#blog_post
 	background-color: $color4
 #comments input[type="submit"]:active
 	background-color: $color2
+
+/***** media queries ********************/
+@media screen and (min-width: 800px)
+	#logo
+		margin: 0 8%
+	nav#menu
+		margin: 0 8%
+	#body_content_title
+		width: 84%
+		padding: 1em 8% 0 8%
+	#body, #body_content_left
+		width: 84%
+		padding: 1em 8% 0 8%
+	#side_body
+		width: 84%
+		padding: 0 8%

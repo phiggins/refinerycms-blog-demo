@@ -5,7 +5,6 @@ Pete:
 	•	#tags in sidebar should be <ul>
 
 Nicki:
-	•	style sidebar and footer (once ID added to footer)
 	•	add media queries to set styles for wider screens/devices
 	•	style comment section - gravatar images, nested comments, form
 	•	print stylesheet
