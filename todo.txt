@@ -6,6 +6,5 @@ Pete:
 
 Nicki:
 	•	add media queries to set styles for wider screens/devices
-	•	style comment section - gravatar images, nested comments, form
 	•	print stylesheet
 	•	browser testing
