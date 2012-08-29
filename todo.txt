@@ -1,8 +1,7 @@
 Pete:
-	•	blog posts not in order (may be sorting by day and then alphabetically)
-	•	add ID to footer
+	•	blog posts not in order
+	•	#next_prev_article buttons not in order
 	•	search feature?
-	•	#tags in sidebar should be <ul>
 
 Nicki:
 	•	add media queries to set styles for wider screens/devices
