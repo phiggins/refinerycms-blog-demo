@@ -37,6 +37,25 @@ a
 	color: $color2
 a:hover, a:focus
 	color: $color3
+ul
+	list-style-type: square
+	list-style-position: inside
+blockquote
+	display: block
+	border-left: $thinBorder
+	padding-left: 8%
+	padding-right: 8%
+	font-style: italic
+blockquote:before
+	float: left
+	content: '"'
+	font-size: 280%
+	padding: 0.25em 15px 5px 0
+	margin-left: -35px
+q
+	font-style: italic
+q:before, q:after
+	content: '"'
 
 /***** header ***************************/
 header
@@ -183,19 +202,9 @@ article.blog_post, article#blog_post
 
 /***** buttons **************************/
 #next_prev_article
-	padding: 1.5em 0
+	padding: 2em 0
 	a
 		padding: 0.5em 2px
-		text-align: center
-		font-size: 1em
-	.next, .prev
-		text-decoration: none
-		color: $color2
-		background-color: $color5
-		border: $thinBorder
-		border-radius: $rounded
-.next
-	background-color: #000
 #comments input[type="submit"]
 	padding: 0.5em 5px
 	margin: 0.5em 0

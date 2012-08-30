@@ -2,6 +2,7 @@ Pete:
 	•	blog posts not in order
 	•	#next_prev_article buttons not in order
 	•	search feature?
+	•	disable bottom textarea when using HTML editor
 
 Nicki:
 	•	add media queries to set styles for wider screens/devices
