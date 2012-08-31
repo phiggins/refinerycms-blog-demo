@@ -22,7 +22,7 @@ body
 	background-image: url(bkgd.png)
 #page_container
 	width: 100%
-	max-width: 1400px
+	max-width: 1200px
 	margin: 0 auto
 	+main-fonts
 	border-top: $thickBorder
@@ -82,17 +82,18 @@ header
 				text-decoration: none
 			a:hover, a:focus
 				border-bottom: 1px solid $color3
-#body_content_title
-	padding: 0.25em 0 0.5em 0
-	font-size: 1.75em
 
 /***** content **************************/
+#page
+	margin: 0 auto
+	width: 92%
+	padding: 0 4%
 #body_content_title
-	width: 92%
-	padding: 1em 4% 0 4%
+	padding: 1em 0 0 0
+	font-size: 1.75em
 #body, #body_content_left
-	width: 92%
-	padding: 1em 4% 0 4%
+	width: 100%
+	padding: 1em 0 0 0
 	margin-bottom: 0.5em
 article.blog_post, article#blog_post
 	padding: $verticalPadding
@@ -110,13 +111,27 @@ article.blog_post, article#blog_post
 		font-size: 1em
 	header
 		text-align: left
+		h1 a
+			+main-fonts
 		.details
 			+secondary-fonts
+			font-size: 0.9em
+			color: $color3
+			a
+				color: $color3
+			a:hover, a:focus
+				color: $color2
 		time
 			float: right
 	footer
-		p a
+		+secondary-fonts
+		font-size: 0.9em
+		color: $color3
+		a
 			padding: $verticalPadding
+			color: $color3
+		a:hover, a:focus
+			color: $color2
 .blog_post:first-child
 	padding: 0.5em 0 1.5em 0
 .blog_post
@@ -150,6 +165,7 @@ article.blog_post, article#blog_post
 	.disabled:hover, .disabled:focus
 		background-color: $color5
 #comments
+	border-top: $thinBorder
 	padding: 1em 0
 	h2
 		text-align: center
@@ -162,24 +178,24 @@ article.blog_post, article#blog_post
 	textarea
 		height: 15em
 .blog_comment_message
-	clear: both
-	width: 100%
+	font-size: 0.75em
+	margin-bottom: 1em
 	.avatar
 		float: left
-		max-width: 20%
+		max-width: 25%
 		max-height: 200px
 		margin-top: 0.75em
 	p
-		width: 80%
+		width: 71%
+		padding-left: 4%
 		float: right
-		font-size: 0.75em
 
 /***** sidebar **************************/
 #side_body
-	width: 92%
-	padding: 0 4%
+	width: 100%
 #body_content_right
-	padding: 0 4% 1em 4%
+	width: 100%
+	padding: 0 0 1em 0
 	border-top: $thickBorder
 	h2
 		font-size: 1.2em
@@ -190,13 +206,13 @@ article.blog_post, article#blog_post
 
 /***** footer ***************************/
 #page-footer
-	max-width: 1400px
+	max-width: 1200px
 	margin: 0 auto
-	margin-top: 1em
+	margin: 1em 4% 0 4%
 	padding: 0.5em 4%
 	text-align: center
 	font-size: 0.8em
-	border-top: $thickBorder
+	border-top: $thinBorder
 
 /***** messages/popups ******************/
 
@@ -204,7 +220,7 @@ article.blog_post, article#blog_post
 #next_prev_article
 	padding: 2em 0
 	a
-		padding: 0.5em 2px
+		padding: 2em 0
 #comments input[type="submit"]
 	padding: 0.5em 5px
 	margin: 0.5em 0
@@ -222,19 +238,68 @@ article.blog_post, article#blog_post
 		margin: 0 8%
 	header nav#menu
 		margin: 0 8%
-	#body_content_title
-		width: 84%
-		padding: 1em 8% 0 8%
-	#body, #body_content_left
-		width: 84%
-		padding: 1em 8% 0 8%
-	#side_body
+	#page
 		width: 84%
 		padding: 0 8%
-	#body_content_right
-		padding: 0 8%
+	.blog_comment_message p
+		width: 67%
+		padding-left: 8%
+		float: right
+	#comments input[type="submit"]
+		width: 50%
+		float: right
 	#page-footer
 		padding: 0.5em 8%
+		margin: 1em 8% 0 8%
 
 @media screen and (min-width: 800px)
+	#logo
+		margin: 0 12%
+	header nav#menu
+		margin: 0 12%
+		li
+			padding: 1em 12%
+	#page
+		width: 76%
+		padding: 0 12%
+	.blog_comment_message p
+		width: 63%
+		padding-left: 12%
+		float: right
+	#comments input[type="submit"]
+		width: 25%
+	#page-footer
+		padding: 0.5em 12%
+		margin: 1em 12% 0 12%
 
+@media screen and (min-width: 1000px)
+	#logo
+		margin: 0 12.5%
+	header nav#menu
+		margin: 0 12.5%
+		li
+			padding: 1em 12.5%
+	#page
+		width: 75%
+		padding: 0 12.5%
+	#body, #body_content_left
+		width: 68.5%
+		padding-right: 6.25%
+		float: left
+		border-right: $thinBorder
+	.blog_comment_message p
+		width: 62.5%
+		padding-left: 12.5%
+		float: right
+	#side_body
+		width: 18.75%
+		padding-left: 6.25%
+		float: right
+	#body_content_right
+		width: 18.75%
+		padding-left: 6.25%
+		float: right
+		border-top: none
+	#page-footer
+		padding: 0.5em 12.5%
+		margin: 1em 12.5% 0 12.5%
