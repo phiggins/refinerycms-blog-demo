@@ -5,6 +5,5 @@ Pete:
 	•	disable bottom textarea when using HTML editor
 
 Nicki:
-	•	add media queries to set styles for wider screens/devices
 	•	print stylesheet
 	•	browser testing
