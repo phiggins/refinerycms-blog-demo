@@ -3,12 +3,14 @@
 /* Variables */
 $color1: #0D0D0D /* darkest gray */
 $color2: #333333 /* dark gray */
-$color3: #999999 /* gray */
-$color4: #CCCCCC /* light gray */
-$color5: #FFFFFF /* white */
+$color3: #888888 /* medium gray */
+$color4: #999999 /* gray */
+$color5: #CCCCCC /* light gray */
+$color6: #FFFFFF /* white */
 $verticalPadding: 0.5em 0
 $thickBorder: 6px solid $color2
 $thinBorder: 1px solid $color1
+$thinLightBorder: 1px solid $color3
 $rounded: 5px
 
 /* Typography Mixins */
@@ -36,7 +38,7 @@ a
 	text-decoration: underline
 	color: $color2
 a:hover, a:focus
-	color: $color3
+	color: $color4
 ul
 	list-style-type: square
 	list-style-position: inside
@@ -81,7 +83,7 @@ header
 				padding: 0.1em 0
 				text-decoration: none
 			a:hover, a:focus
-				border-bottom: 1px solid $color3
+				border-bottom: 1px solid $color4
 
 /***** content **************************/
 #page
@@ -116,9 +118,9 @@ article.blog_post, article#blog_post
 		.details
 			+secondary-fonts
 			font-size: 0.9em
-			color: $color3
+			color: $color4
 			a
-				color: $color3
+				color: $color4
 			a:hover, a:focus
 				color: $color2
 		time
@@ -126,16 +128,16 @@ article.blog_post, article#blog_post
 	footer
 		+secondary-fonts
 		font-size: 0.9em
-		color: $color3
+		color: $color4
 		a
 			padding: $verticalPadding
-			color: $color3
+			color: $color4
 		a:hover, a:focus
 			color: $color2
 .blog_post:first-child
 	padding: 0.5em 0 1.5em 0
 .blog_post
-	border-bottom: $thinBorder
+	border-bottom: $thinLightBorder
 	padding: 2em 0
 	header
 		padding: $verticalPadding
@@ -154,16 +156,16 @@ article.blog_post, article#blog_post
 		padding: 0.25em 8px
 		border-radius: $rounded
 		color: $color1
-		background-color: $color5
+		background-color: $color6
 		border: $thinBorder
 		text-decoration: none
 	em
-		background-color: $color4
+		background-color: $color5
 	a:hover, a:focus, span:hover, span:focus
 		color: $color1
-		background-color: $color4
-	.disabled:hover, .disabled:focus
 		background-color: $color5
+	.disabled:hover, .disabled:focus
+		background-color: $color6
 #comments
 	border-top: $thinBorder
 	padding: 1em 0
@@ -174,7 +176,7 @@ article.blog_post, article#blog_post
 		padding: $verticalPadding
 		border-radius: $rounded
 		border: $thinBorder
-		background-color: $color5
+		background-color: $color6
 	textarea
 		height: 15em
 .blog_comment_message
@@ -225,10 +227,10 @@ article.blog_post, article#blog_post
 	padding: 0.5em 5px
 	margin: 0.5em 0
 	font-size: 1em
-	color: $color5
+	color: $color6
 	background-color: $color2
 #comments input[type="submit"]:hover, #comments input[type="submit"]:focus
-	background-color: $color4
+	background-color: $color5
 #comments input[type="submit"]:active
 	background-color: $color2
 
@@ -286,7 +288,7 @@ article.blog_post, article#blog_post
 		width: 68.5%
 		padding-right: 6.25%
 		float: left
-		border-right: $thinBorder
+		border-right: 1px solid $color5
 	.blog_comment_message p
 		width: 62.5%
 		padding-left: 12.5%
